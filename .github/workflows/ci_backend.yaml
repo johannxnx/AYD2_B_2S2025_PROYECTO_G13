@@ -48,5 +48,10 @@ jobs:
         run: npm test
 
       - name: Run integration tests
+        if: ${{ env.DB_SERVER != '' && env.DB_PORT != '' && env.DB_USER != '' && env.DB_PASSWORD != '' && env.DB_NAME != '' }}
         working-directory: "FASE 3/backend"
         run: npm run test:int
+
+      - name: Skip integration tests (missing DB secrets)
+        if: ${{ !(env.DB_SERVER != '' && env.DB_PORT != '' && env.DB_USER != '' && env.DB_PASSWORD != '' && env.DB_NAME != '') }}
+        run: echo "Skipping integration tests because required DB_* secrets are not configured for this run."
