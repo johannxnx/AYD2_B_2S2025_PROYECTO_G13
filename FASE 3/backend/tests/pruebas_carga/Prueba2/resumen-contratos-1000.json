@@ -1,0 +1,37 @@
+{
+  "fecha_prueba": "2026-04-16T21:41:54.071Z",
+  "tipo_prueba": "PRUEBA DE CARGA - 1000 CONTRATOS SIMULADOS",
+  "conclusion": "Se determinó que el sistema soporta la simulación de 1000 contratos con 20 usuarios virtuales simultáneos. \n    Se logró un tiempo promedio de login de 1725.17ms y una tasa de éxito del 100.00% en la validación de credenciales. \n    Los contratos generados incluyen datos realistas como límites de crédito (promedio Q276846.921) y ahorros negociados (promedio Q-595.5585999999998).",
+  "estado": "EXITOSO - No se escribió en base de datos",
+  "cliente_objetivo": {
+    "id": 36,
+    "nombre": "Jens Prueba"
+  },
+  "configuracion": {
+    "usuarios_virtuales": 20,
+    "iteraciones_por_usuario": 50,
+    "total_contratos_simulados": 1000,
+    "simulacion_envio_db": false
+  },
+  "metricas_rendimiento": {
+    "login": {
+      "tiempo_promedio_ms": 1725.17,
+      "tiempo_minimo_ms": 285,
+      "tiempo_maximo_ms": 6209,
+      "tiempo_p95_ms": 2638.2,
+      "tasa_error_porcentaje": 0
+    }
+  },
+  "resultados": {
+    "total_contratos_generados": 1000,
+    "total_limite_credito_acumulado": 276846921,
+    "promedio_limite_credito": 276846.92,
+    "total_ahorro_acumulado": -595558.6,
+    "promedio_ahorro": -595.56,
+    "contratos_por_estado": {
+      "VIGENTE": 298,
+      "PENDIENTE": 335,
+      "ACTIVO": 367
+    }
+  }
+}

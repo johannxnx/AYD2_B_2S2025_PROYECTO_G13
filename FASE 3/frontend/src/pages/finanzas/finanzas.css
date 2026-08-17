@@ -1,0 +1,497 @@
+/* ==========================================================
+   finanzas.css — LogiTrans Guatemala, S.A.
+   Módulo de Facturación Electrónica y Pagos
+   Importar en cada page: import '../../styles/finanzas.css';
+   (o desde la ruta que corresponda)
+   ========================================================== */
+
+/* ── Variables ─────────────────────────────────────────── */
+:root {
+    --fn-azul:       #1e3a5f;
+    --fn-azul-mid:   #2a5298;
+    --fn-azul-light: #e8f0fe;
+    --fn-verde:      #1a7f4b;
+    --fn-verde-light:#e6f4ed;
+    --fn-rojo:       #b91c1c;
+    --fn-rojo-light: #fef2f2;
+    --fn-amarillo:   #92400e;
+    --fn-amarillo-light: #fffbeb;
+    --fn-gris:       #6b7280;
+    --fn-gris-light: #f3f4f6;
+    --fn-borde:      #e5e7eb;
+    --fn-texto:      #111827;
+    --fn-texto-suave:#6b7280;
+    --fn-blanco:     #ffffff;
+    --fn-sombra:     0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+    --fn-sombra-md:  0 4px 12px rgba(0,0,0,.10);
+    --fn-radio:      10px;
+    --fn-radio-sm:   6px;
+  }
+  
+  /* ── Reset base ────────────────────────────────────────── */
+  .fn-page {
+    min-height: 100vh;
+    background: #f0f4f8;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--fn-texto);
+  }
+  
+  /* ── Contenedor principal ──────────────────────────────── */
+  .fn-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 24px;
+  }
+  
+  /* ── Header de página (título + subtítulo interno) ─────── */
+  .fn-page-header {
+    margin-bottom: 28px;
+  }
+  .fn-page-header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--fn-azul);
+    margin: 0 0 4px;
+  }
+  .fn-page-header p {
+    font-size: 0.875rem;
+    color: var(--fn-texto-suave);
+    margin: 0;
+  }
+  
+  /* ── Cards de estadísticas ─────────────────────────────── */
+  .fn-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .fn-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+  }
+
+
+  .fn-modal {
+    background: white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 480px;
+  }
+  
+  .fn-stat-card {
+    background: var(--fn-blanco);
+    border: 1px solid var(--fn-borde);
+    border-radius: var(--fn-radio);
+    padding: 20px;
+    box-shadow: var(--fn-sombra);
+  }
+  .fn-stat-card .stat-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--fn-texto-suave);
+    margin: 0 0 8px;
+  }
+  .fn-stat-card .stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+  }
+  .fn-stat-card .stat-sub {
+    font-size: 0.75rem;
+    color: var(--fn-texto-suave);
+    margin: 6px 0 0;
+  }
+  
+  .fn-stat-azul   .stat-value { color: var(--fn-azul-mid); }
+  .fn-stat-verde  .stat-value { color: var(--fn-verde); }
+  .fn-stat-rojo   .stat-value { color: var(--fn-rojo); }
+  .fn-stat-gris   .stat-value { color: var(--fn-gris); }
+  .fn-stat-amarillo .stat-value { color: var(--fn-amarillo); }
+  
+  /* ── Panel / Card general ──────────────────────────────── */
+  .fn-panel {
+    background: var(--fn-blanco);
+    border: 1px solid var(--fn-borde);
+    border-radius: var(--fn-radio);
+    box-shadow: var(--fn-sombra);
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+  .fn-panel-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--fn-borde);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .fn-panel-header h2 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--fn-azul);
+    margin: 0;
+  }
+  .fn-panel-body {
+    padding: 20px;
+  }
+  
+  /* ── Filtros ───────────────────────────────────────────── */
+  .fn-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+    padding: 16px 20px;
+    background: var(--fn-blanco);
+    border: 1px solid var(--fn-borde);
+    border-radius: var(--fn-radio);
+    margin-bottom: 20px;
+    box-shadow: var(--fn-sombra);
+  }
+  .fn-filtros .fn-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .fn-filtros .fn-field label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--fn-texto-suave);
+  }
+  
+  /* ── Inputs y selects ──────────────────────────────────── */
+  .fn-input,
+  .fn-select {
+    border: 1px solid var(--fn-borde);
+    border-radius: var(--fn-radio-sm);
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    color: var(--fn-texto);
+    background: var(--fn-blanco);
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+    min-width: 150px;
+  }
+  .fn-input:focus,
+  .fn-select:focus {
+    border-color: var(--fn-azul-mid);
+    box-shadow: 0 0 0 3px rgba(42,82,152,.12);
+  }
+  
+  /* ── Botones ───────────────────────────────────────────── */
+  .fn-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: var(--fn-radio-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background .15s, opacity .15s, transform .1s;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .fn-btn:active { transform: scale(.98); }
+  .fn-btn:disabled { opacity: .55; cursor: not-allowed; }
+  
+  .fn-btn-primary   { background: var(--fn-azul);     color: #fff; }
+  .fn-btn-primary:hover:not(:disabled)   { background: #163052; }
+  
+  .fn-btn-success   { background: var(--fn-verde);    color: #fff; }
+  .fn-btn-success:hover:not(:disabled)   { background: #155d37; }
+  
+  .fn-btn-danger    { background: var(--fn-rojo);     color: #fff; }
+  .fn-btn-danger:hover:not(:disabled)    { background: #991b1b; }
+  
+  .fn-btn-ghost     { background: var(--fn-gris-light); color: var(--fn-texto); }
+  .fn-btn-ghost:hover:not(:disabled)     { background: #e5e7eb; }
+  
+  .fn-btn-outline   { background: transparent; border: 1.5px solid var(--fn-azul-mid); color: var(--fn-azul-mid); }
+  .fn-btn-outline:hover:not(:disabled)   { background: var(--fn-azul-light); }
+  
+  .fn-btn-sm { padding: 5px 10px; font-size: 0.78rem; }
+  .fn-btn-xs { padding: 3px 8px;  font-size: 0.72rem; }
+  
+  /* ── Tabla ─────────────────────────────────────────────── */
+  .fn-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--fn-radio-sm);
+  }
+  .fn-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .fn-table thead th {
+    background: var(--fn-gris-light);
+    color: var(--fn-texto-suave);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: 10px 14px;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--fn-borde);
+  }
+  .fn-table tbody tr {
+    border-bottom: 1px solid var(--fn-borde);
+    transition: background .12s;
+  }
+  .fn-table tbody tr:last-child { border-bottom: none; }
+  .fn-table tbody tr:hover { background: #f8fafc; }
+  .fn-table tbody td {
+    padding: 10px 14px;
+    color: var(--fn-texto);
+    vertical-align: middle;
+  }
+  .fn-table .mono {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+  }
+  
+  /* ── Badges de estado ──────────────────────────────────── */
+  .fn-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    white-space: nowrap;
+  }
+  .fn-badge-borrador   { background: var(--fn-amarillo-light); color: var(--fn-amarillo); }
+  .fn-badge-validada   { background: var(--fn-azul-light);     color: var(--fn-azul-mid); }
+  .fn-badge-certificada{ background: var(--fn-verde-light);    color: var(--fn-verde); }
+  .fn-badge-anulada    { background: var(--fn-rojo-light);     color: var(--fn-rojo); }
+  .fn-badge-pendiente  { background: var(--fn-amarillo-light); color: var(--fn-amarillo); }
+  .fn-badge-pagada     { background: var(--fn-verde-light);    color: var(--fn-verde); }
+  .fn-badge-vencida    { background: var(--fn-rojo-light);     color: var(--fn-rojo); }
+  .fn-badge-cheque      { background: var(--fn-azul-light);    color: var(--fn-azul-mid); }
+  .fn-badge-transferencia { background: #ede9fe;               color: #5b21b6; }
+  
+  /* ── Alertas ───────────────────────────────────────────── */
+  .fn-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 16px;
+    border-radius: var(--fn-radio-sm);
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+  }
+  .fn-alert-success { background: var(--fn-verde-light); color: var(--fn-verde); border: 1px solid #bbf7d0; }
+  .fn-alert-error   { background: var(--fn-rojo-light);  color: var(--fn-rojo);  border: 1px solid #fecaca; }
+  .fn-alert-info    { background: var(--fn-azul-light);  color: var(--fn-azul-mid); border: 1px solid #bfdbfe; }
+  
+  /* ── Formularios ───────────────────────────────────────── */
+  .fn-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .fn-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .fn-form-field label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--fn-texto);
+  }
+  .fn-form-field .fn-input,
+  .fn-form-field .fn-select {
+    width: 100%;
+  }
+  .fn-form-field .fn-hint {
+    font-size: 0.72rem;
+    color: var(--fn-texto-suave);
+  }
+  .fn-form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--fn-borde);
+  }
+  
+  /* ── Modal ─────────────────────────────────────────────── */
+  .fn-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .fn-modal {
+    background: var(--fn-blanco);
+    border-radius: var(--fn-radio);
+    box-shadow: var(--fn-sombra-md);
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .fn-modal-header {
+    background: var(--fn-azul);
+    color: #fff;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .fn-modal-header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  .fn-modal-close {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,.7);
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: color .12s;
+  }
+  .fn-modal-close:hover { color: #fff; }
+  .fn-modal-body {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  .fn-modal-footer {
+    padding: 12px 20px;
+    border-top: 1px solid var(--fn-borde);
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  
+  /* ── Detalle KV (key-value row) ────────────────────────── */
+  .fn-kv-list { display: flex; flex-direction: column; gap: 10px; }
+  .fn-kv-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 0.875rem;
+  }
+  .fn-kv-row .kv-label { color: var(--fn-texto-suave); flex-shrink: 0; }
+  .fn-kv-row .kv-value { font-weight: 600; text-align: right; }
+  .fn-kv-divider {
+    border: none;
+    border-top: 1px solid var(--fn-borde);
+    margin: 6px 0;
+  }
+  .fn-kv-total .kv-label,
+  .fn-kv-total .kv-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--fn-azul);
+  }
+  
+  /* ── UUID box ──────────────────────────────────────────── */
+  .fn-uuid-box {
+    background: var(--fn-verde-light);
+    border: 1px solid #bbf7d0;
+    border-radius: var(--fn-radio-sm);
+    padding: 10px 14px;
+    margin-top: 12px;
+  }
+  .fn-uuid-box .uuid-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--fn-verde);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin-bottom: 4px;
+  }
+  .fn-uuid-box .uuid-value {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #155d37;
+    word-break: break-all;
+  }
+  
+  /* ── Empty state ───────────────────────────────────────── */
+  .fn-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    color: var(--fn-texto-suave);
+    gap: 10px;
+  }
+  .fn-empty .empty-icon { font-size: 2.5rem; opacity: .35; }
+  .fn-empty p { font-size: 0.9rem; margin: 0; }
+  
+  /* ── Spinner ───────────────────────────────────────────── */
+  .fn-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  .fn-spinner::after {
+    content: '';
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--fn-borde);
+    border-top-color: var(--fn-azul-mid);
+    border-radius: 50%;
+    animation: fn-spin .7s linear infinite;
+  }
+  @keyframes fn-spin { to { transform: rotate(360deg); } }
+  
+  /* ── Dashboard grid ────────────────────────────────────── */
+  .fn-dash-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
+  }
+  
+  /* ── Botón de acción de fila ───────────────────────────── */
+  .fn-row-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+  
+  /* ── Responsive ────────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .fn-container { padding: 16px 12px; }
+    .fn-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .fn-filtros { flex-direction: column; align-items: stretch; }
+    .fn-filtros .fn-input,
+    .fn-filtros .fn-select { min-width: auto; width: 100%; }
+    .fn-form-grid { grid-template-columns: 1fr; }
+    .fn-dash-grid { grid-template-columns: 1fr; }
+    .fn-modal { max-width: 100%; }
+  }

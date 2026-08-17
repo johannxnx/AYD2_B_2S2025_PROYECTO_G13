@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "fecha_prueba": "2026-04-16T22:49:42.490Z",
+    "tipo_prueba": "SIMULACIÓN - Flujo completo del Piloto",
+    "descripcion": "Simula el flujo de trabajo de un piloto: ver órdenes, reportar eventos, finalizar entregas",
+    "piloto": {
+      "email": "nando1852004@gmail.com",
+      "login_validado": true
+    },
+    "configuracion": {
+      "usuarios_virtuales": 10,
+      "iteraciones_por_usuario": 100,
+      "total_entregas_simuladas": 1000,
+      "tiempo_ejecucion_segundos": 0
+    }
+  },
+  "metricas_rendimiento": {
+    "login": {
+      "tiempo_promedio_ms": 1544.7,
+      "tiempo_minimo_ms": 1056,
+      "tiempo_maximo_ms": 1925,
+      "tiempo_p95_ms": 1924.55,
+      "total_peticiones": 0,
+      "tasa_error_porcentaje": 0
+    }
+  },
+  "resultados_simulacion": {
+    "entregas_completadas": 1000,
+    "eventos_reportados": 318,
+    "total_operaciones": 1000,
+    "porcentaje_eventos": 31.8,
+    "tasa_exito_porcentaje": 100
+  },
+  "metricas_negocio_simuladas": {
+    "tiempo_estimado_promedio_min": 0,
+    "ordenes_promedio_en_transito": 0,
+    "tipos_evento": [
+      "NORMAL",
+      "INCIDENTE",
+      "RETRASO",
+      "CRITICO"
+    ],
+    "probabilidad_evento_simulada": "30%"
+  }
+}

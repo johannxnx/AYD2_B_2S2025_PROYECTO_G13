@@ -1,0 +1,52 @@
+name: CI Backend
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  backend-tests:
+    runs-on: ubuntu-latest
+
+    env:
+      EMAIL_USER: ${{ secrets.EMAIL_USER }}
+      EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+      DB_SERVER: ${{ secrets.DB_SERVER }}
+      DB_PORT: ${{ secrets.DB_PORT }}
+      DB_USER: ${{ secrets.DB_USER }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      DB_NAME: ${{ secrets.DB_NAME }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: npm
+          cache-dependency-path: "**/package-lock.json"
+
+      - name: Debug path
+        working-directory: "FASE 3/backend"
+        run: |
+          pwd
+          ls -la
+
+      - name: Install dependencies
+        working-directory: "FASE 3/backend"
+        run: npm ci
+
+      - name: Run unit tests
+        working-directory: "FASE 3/backend"
+        run: npm test
+
+      - name: Run integration tests
+        working-directory: "FASE 3/backend"
+        run: npm run test:int

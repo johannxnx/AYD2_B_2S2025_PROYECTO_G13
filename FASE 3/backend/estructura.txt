@@ -1,0 +1,199 @@
+Listado de rutas de carpetas para el volumen Windows-SSD
+El n·mero de serie del volumen es EECE-3EEC
+C:.
+ª   .dockerignore
+ª   .env
+ª   .gitignore
+ª   archivos.txt
+ª   backend.log
+ª   Dockerfile
+ª   EnpointOrdens.md
+ª   estructura.txt
+ª   index.js
+ª   package-lock.json
+ª   package.json
+ª   README.md
+ª   
++---evidencias
+ª       evidencias-1775278651780-302446040.jpg
+ª       evidencias-1775425643776-357843563.png
+ª       evidencias-1775430267962-725222996.png
+ª       evidencias-1775447783986-923265373.png
+ª       evidencias-1775769583924-699580514.png
+ª       evidencias-1775769795364-703414024.png
+ª       evidencias-1776153635406-273568736.jpg
+ª       evidencias-1776177174014-554026073.png
+ª       evidencias-1776185106278-670209752.png
+ª       
++---node_modules      
++---src
+ª   +---config
+ª   ª       config.md
+ª   ª       db.js
+ª   ª       
+ª   +---controllers
+ª   ª   ª   controllers.md
+ª   ª   ª   
+ª   ª   +---auth
+ª   ª   ª       auth.controller.js
+ª   ª   ª       
+ª   ª   +---contratos
+ª   ª   ª       contratoController.js
+ª   ª   ª       
+ª   ª   +---facturacion
+ª   ª   ª       facturacionController.js
+ª   ª   ª       finanzasTarifarioController.js
+ª   ª   ª       
+ª   ª   +---gerencial
+ª   ª   ª       dashboard.controller.js
+ª   ª   ª       
+ª   ª   +---notificaciones
+ª   ª   ª       notificaciones.md
+ª   ª   ª       notificacionesController.js
+ª   ª   ª       
+ª   ª   +---orden
+ª   ª   ª       orden.controller.js
+ª   ª   ª       
+ª   ª   +---tarifario
+ª   ª   ª       tarifarioController.js
+ª   ª   ª       
+ª   ª   +---usuarios
+ª   ª           usuarioController.js
+ª   ª           
+ª   +---middlewares
+ª   ª   ª   middleware.md
+ª   ª   ª   
+ª   ª   +---auth
+ª   ª   ª       auth.middleware.js
+ª   ª   ª       auth.validation.middleware.js
+ª   ª   ª       role.middleware.js
+ª   ª   ª       
+ª   ª   +---orden
+ª   ª           orden.validation.middleware.js
+ª   ª           
+ª   +---models
+ª   ª   ª   models.md
+ª   ª   ª   
+ª   ª   +---auditoria
+ª   ª   ª       Auditoria.js
+ª   ª   ª       
+ª   ª   +---auth
+ª   ª   ª       user.store.js
+ª   ª   ª       
+ª   ª   +---contratos
+ª   ª   ª       Contrato.js
+ª   ª   ª       ContratoTarifa.js
+ª   ª   ª       CuentasPorCobrar.js
+ª   ª   ª       Descuento.js
+ª   ª   ª       FacturaFEL.js
+ª   ª   ª       Historialcliente.js
+ª   ª   ª       MovimientoCredito.js
+ª   ª   ª       RutaAutorizada.js
+ª   ª   ª       
+ª   ª   +---facturacion
+ª   ª   ª       FacturaFel.js
+ª   ª   ª       
+ª   ª   +---orden
+ª   ª   ª       orden.store.js
+ª   ª   ª       
+ª   ª   +---tarifario
+ª   ª   ª       Tarifario.js
+ª   ª   ª       
+ª   ª   +---usuarios
+ª   ª           RiesgoCliente.js
+ª   ª           Usuario.js
+ª   ª           
+ª   +---routes
+ª   ª   ª   API_ENDPOINTS_GESTION DE CLIENTES Y CONTRATOS.md
+ª   ª   ª   index_routes.js
+ª   ª   ª   routes.md
+ª   ª   ª   
+ª   ª   +---auth
+ª   ª   ª       auth.routes.js
+ª   ª   ª       
+ª   ª   +---contratos
+ª   ª   ª       contratoRoutes.js
+ª   ª   ª       
+ª   ª   +---facturacion
+ª   ª   ª       facturacion.md
+ª   ª   ª       routes_factuacion.js
+ª   ª   ª       routes_finanzas_tarifario.js
+ª   ª   ª       
+ª   ª   +---gerencial
+ª   ª   ª       dashboard.routes.js
+ª   ª   ª       
+ª   ª   +---notificaciones
+ª   ª   ª       notificacionesRoutes.js
+ª   ª   ª       
+ª   ª   +---orden
+ª   ª   ª       orden.routes.js
+ª   ª   ª       
+ª   ª   +---tarifario
+ª   ª   ª       tarifarioRoutes.js
+ª   ª   ª       
+ª   ª   +---usuarios
+ª   ª           usuarioRoutes.js
+ª   ª           
+ª   +---services
+ª   ª   ª   services.md
+ª   ª   ª   
+ª   ª   +---archivos
+ª   ª   ª       archivo.service.js
+ª   ª   ª       
+ª   ª   +---auth
+ª   ª   ª       auth.service.js
+ª   ª   ª       
+ª   ª   +---contratos
+ª   ª   ª       contratoService.js
+ª   ª   ª       
+ª   ª   +---facturacion
+ª   ª   ª       Facturacion.js
+ª   ª   ª       fel_simulacion.js
+ª   ª   ª       finanzasTarifarioService.js
+ª   ª   ª       
+ª   ª   +---gerencial
+ª   ª   ª       dashboard.service.js
+ª   ª   ª       
+ª   ª   +---orden
+ª   ª   ª       orden.service.js
+ª   ª   ª       
+ª   ª   +---tarifario
+ª   ª   ª       tarifarioService.js
+ª   ª   ª       
+ª   ª   +---usuarios
+ª   ª           usuarioService.js
+ª   ª           
+ª   +---utils
+ª       ª   auditoria.j
+ª       ª   ejemplo_enviarCorreos.js
+ª       ª   jwt.js
+ª       ª   mailer.js
+ª       ª   multer.js
+ª       ª   notificaciones.js
+ª       ª   utils.md
+ª       ª   
+ª       +---formato_correo
+ª               comoUsarCorreos.md
+ª               correcto.js
+ª               incorrecto.js
+ª               informativo.js
+ª               
++---tests
+    ª   dashboard.service.test.js
+    ª   
+    +---pruebas_carga
+    ª       carga_docu.md
+    ª       
+    +---pruebas_e2e
+    ª       e2e_docu.md
+    ª       
+    +---pruebas_estres
+    ª       estres_docu.md
+    ª       
+    +---pruebas_integracion
+    ª       integracion_docu.md
+    ª       
+    +---pruebas_unitarias
+            unitarias.test.js
+            unitarias_docu.md
+            

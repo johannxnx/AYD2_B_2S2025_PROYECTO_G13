@@ -1,0 +1,25 @@
+{
+  "fecha_prueba": "2026-04-16T21:17:53.467Z",
+  "tipo_prueba": "SIMULACIÓN - Generación de pilotos (solo JSON)",
+  "estado": "EXITOSO - No se escribió en base de datos",
+  "agente_logistico": {
+    "email": "logistico@logitrans.com",
+    "login_validado": true,
+    "tiempo_promedio_login_ms": 1568.68
+  },
+  "configuracion": {
+    "usuarios_virtuales": 10,
+    "iteraciones_por_usuario": 5,
+    "total_pilotos_simulados": 50
+  },
+  "metricas_simuladas": {
+    "tiempo_promedio_creacion_ms": 0,
+    "total_operaciones_simuladas": 1000,
+    "tasa_error_login": 0
+  },
+  "resultados": {
+    "pilotos_generados": 50,
+    "telefonos_unicos": 50,
+    "nota": "Los pilotos NO fueron creados en la base de datos. Solo se generó este JSON."
+  }
+}

@@ -1,0 +1,6578 @@
+{
+  "metadata": {
+    "fecha_generacion": "2026-04-16T21:41:54.070Z",
+    "tipo_prueba": "PRUEBA DE CARGA - 1000 contratos simulados",
+    "objetivo": "Validar comportamiento del sistema bajo alta demanda (1000 contratos)",
+    "agente_logistico": {
+      "email": "logistico@logitrans.com",
+      "login_validado": true
+    },
+    "configuracion": {
+      "usuarios_virtuales": 20,
+      "iteraciones_por_usuario": 50,
+      "total_contratos_simulados": 1000
+    }
+  },
+  "simulacion": {
+    "enviado_a_db": false,
+    "tipo": "SOLO_JSON_SIN_DB",
+    "cliente_objetivo": {
+      "id": 36,
+      "nombre": "Jens Prueba"
+    }
+  },
+  "metricas_rendimiento": {
+    "login": {
+      "tiempo_promedio_ms": 1725.17,
+      "tiempo_minimo_ms": 285,
+      "tiempo_maximo_ms": 6209,
+      "tiempo_p95_ms": 2638.2,
+      "total_peticiones": 0,
+      "tasa_error_porcentaje": 0
+    }
+  },
+  "estadisticas": {
+    "total_contratos_generados": 1000,
+    "promedio_limite_credito": 276846.92,
+    "promedio_ahorro_total": -595.56,
+    "contratos_por_estado": {
+      "VIGENTE": 298,
+      "PENDIENTE": 335,
+      "ACTIVO": 367
+    },
+    "rango_fechas_inicio": {
+      "mas_temprana": "2026-04-16",
+      "mas_tardia": "2026-05-15"
+    }
+  },
+  "contratos": [
+    {
+      "id": "SIM-1-0-1",
+      "numero_contrato": "CTR-202604-000001",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-21",
+      "fecha_fin": "2027-04-21",
+      "estado": "PENDIENTE",
+      "limite_credito": 225065,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.28,
+          "ahorro_por_km": 2.28
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.98,
+          "ahorro_por_km": 1.98
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.78,
+          "ahorro_por_km": 0.78
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 18.02,
+          "observacion": "Cliente preferencial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 17500,
+        "costo_total_negociado": 21028,
+        "ahorro_por_negociacion": -3528,
+        "descuento_aplicado": 729.09,
+        "costo_final": 20298.91,
+        "ahorro_total": -2798.91
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-1-2",
+      "numero_contrato": "CTR-202604-000002",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-21",
+      "fecha_fin": "2027-04-21",
+      "estado": "VIGENTE",
+      "limite_credito": 180570,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.87,
+          "ahorro_por_km": 1.87
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.76,
+          "ahorro_por_km": 1.76
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.83,
+          "ahorro_por_km": 0.83
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 7.68,
+          "observacion": "Descuento por pronto pago"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 13.6,
+          "observacion": "Descuento por volumen"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 18500,
+        "costo_total_negociado": 21800.4,
+        "ahorro_por_negociacion": -3300.4,
+        "descuento_aplicado": 1770.51,
+        "costo_final": 20029.89,
+        "ahorro_total": -1529.89
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-2-3",
+      "numero_contrato": "CTR-202604-000003",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-10",
+      "fecha_fin": "2027-05-10",
+      "estado": "ACTIVO",
+      "limite_credito": 235043,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.82,
+          "ahorro_por_km": 0.82
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.02,
+          "ahorro_por_km": 0.02
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        },
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 10.9,
+          "observacion": "Temporada baja"
+        },
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 12.63,
+          "observacion": "Temporada baja"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 6596,
+        "costo_total_negociado": 6921.92,
+        "ahorro_por_negociacion": -325.92,
+        "descuento_aplicado": 246,
+        "costo_final": 6675.92,
+        "ahorro_total": -79.92
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-3-4",
+      "numero_contrato": "CTR-202604-000004",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-28",
+      "fecha_fin": "2027-04-28",
+      "estado": "ACTIVO",
+      "limite_credito": 343281,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.6,
+          "ahorro_por_km": 0.6
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.46,
+          "ahorro_por_km": 0.46
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 7361,
+          "costo_total_negociado": 7819.98,
+          "ahorro_por_negociacion": -458.98,
+          "descuento_aplicado": 0,
+          "costo_final": 7819.98,
+          "ahorro_total": -458.98
+        },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-4-5",
+      "numero_contrato": "CTR-202604-000005",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-16",
+      "fecha_fin": "2027-04-16",
+      "estado": "ACTIVO",
+      "limite_credito": 182030,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.46,
+          "ahorro_por_km": 1.46
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.69,
+          "ahorro_por_km": 2.69
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 9.76,
+          "observacion": "Temporada baja"
+        },
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 14.19,
+          "observacion": "Descuento por volumen"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 3706,
+        "costo_total_negociado": 4610.7,
+        "ahorro_por_negociacion": -904.7,
+        "descuento_aplicado": 591.87,
+        "costo_final": 4018.83,
+        "ahorro_total": -312.83
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-5-6",
+      "numero_contrato": "CTR-202604-000006",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-13",
+      "fecha_fin": "2027-05-13",
+      "estado": "PENDIENTE",
+      "limite_credito": 476277,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.37,
+          "ahorro_por_km": 2.37
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.7,
+          "ahorro_por_km": 1.7
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 11360,
+          "costo_total_negociado": 13671.76,
+          "ahorro_por_negociacion": -2311.76,
+          "descuento_aplicado": 0,
+          "costo_final": 13671.76,
+          "ahorro_total": -2311.76
+        },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-6-7",
+      "numero_contrato": "CTR-202604-000007",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-08",
+      "fecha_fin": "2027-05-08",
+      "estado": "PENDIENTE",
+      "limite_credito": 148889,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.8,
+          "ahorro_por_km": 1.8
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5,
+          "ahorro_por_km": 0
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 7.97,
+          "observacion": "Contrato anual"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 18.42,
+          "observacion": "Cliente preferencial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 6760,
+        "costo_total_negociado": 7696,
+        "ahorro_por_negociacion": -936,
+        "descuento_aplicado": 938.68,
+        "costo_final": 6757.32,
+        "ahorro_total": 2.68
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-7-8",
+      "numero_contrato": "CTR-202604-000008",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-12",
+      "fecha_fin": "2027-05-12",
+      "estado": "VIGENTE",
+      "limite_credito": 367328,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.36,
+          "ahorro_por_km": 0.36
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 6.26,
+          "observacion": "Cliente preferencial"
+        },
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 13.66,
+          "observacion": "Cliente preferencial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1600,
+        "costo_total_negociado": 1672,
+        "ahorro_por_negociacion": -72,
+        "descuento_aplicado": 104.67,
+        "costo_final": 1567.33,
+        "ahorro_total": 32.67
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-8-9",
+      "numero_contrato": "CTR-202604-000009",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-27",
+      "fecha_fin": "2027-04-27",
+      "estado": "PENDIENTE",
+      "limite_credito": 79361,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.08,
+          "ahorro_por_km": 0.08
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.58,
+          "ahorro_por_km": 0.58
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 8.87,
+          "observacion": "Descuento por volumen"
+        },
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 19.37,
+          "observacion": "Fidelización"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 4810,
+        "costo_total_negociado": 5054.2,
+        "ahorro_por_negociacion": -244.2,
+        "descuento_aplicado": 265.18,
+        "costo_final": 4789.02,
+        "ahorro_total": 20.98
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-9-10",
+      "numero_contrato": "CTR-202604-000010",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-01",
+      "fecha_fin": "2027-05-01",
+      "estado": "VIGENTE",
+      "limite_credito": 375566,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.17,
+          "ahorro_por_km": 1.17
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.38,
+          "ahorro_por_km": 0.38
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.08,
+          "ahorro_por_km": 0.08
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 8.47,
+          "observacion": "Fidelización"
+        },
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 16.69,
+          "observacion": "Descuento por volumen"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 5000,
+        "costo_total_negociado": 5326,
+        "ahorro_por_negociacion": -326,
+        "descuento_aplicado": 410.59,
+        "costo_final": 4915.41,
+        "ahorro_total": 84.59
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-10-11",
+      "numero_contrato": "CTR-202604-000011",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-15",
+      "fecha_fin": "2027-05-15",
+      "estado": "ACTIVO",
+      "limite_credito": 373144,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.75,
+          "ahorro_por_km": 0.75
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.01,
+          "ahorro_por_km": 0.01
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.37,
+          "ahorro_por_km": 2.37
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 9.66,
+          "observacion": "Temporada baja"
+        },
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 10.1,
+          "observacion": "Promoción especial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 2250,
+        "costo_total_negociado": 2531.7,
+        "ahorro_por_negociacion": -281.7,
+        "descuento_aplicado": 177.2,
+        "costo_final": 2354.5,
+        "ahorro_total": -104.5
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-11-12",
+      "numero_contrato": "CTR-202604-000012",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-04",
+      "fecha_fin": "2027-05-04",
+      "estado": "ACTIVO",
+      "limite_credito": 76884,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.91,
+          "ahorro_por_km": 0.91
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.73,
+          "ahorro_por_km": 0.73
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.9,
+          "ahorro_por_km": 0.9
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 6.91,
+          "observacion": "Descuento por pronto pago"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 16250,
+        "costo_total_negociado": 17901,
+        "ahorro_por_negociacion": -1651,
+        "descuento_aplicado": 257.36,
+        "costo_final": 17643.64,
+        "ahorro_total": -1393.64
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-12-13",
+      "numero_contrato": "CTR-202604-000013",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-03",
+      "fecha_fin": "2027-05-03",
+      "estado": "ACTIVO",
+      "limite_credito": 385553,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.65,
+          "ahorro_por_km": 1.65
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 7.57,
+          "observacion": "Fidelización"
+        },
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 7.55,
+          "observacion": "Promoción especial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 2800,
+        "costo_total_negociado": 3377.5,
+        "ahorro_por_negociacion": -577.5,
+        "descuento_aplicado": 255.68,
+        "costo_final": 3121.82,
+        "ahorro_total": -321.82
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-13-14",
+      "numero_contrato": "CTR-202604-000014",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-30",
+      "fecha_fin": "2027-04-30",
+      "estado": "VIGENTE",
+      "limite_credito": 211794,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.97,
+          "ahorro_por_km": 0.97
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 10.03,
+          "ahorro_por_km": 2.03
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.63,
+          "ahorro_por_km": 0.63
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 5.75,
+          "observacion": "Cliente preferencial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 7500,
+        "costo_total_negociado": 8589,
+        "ahorro_por_negociacion": -1089,
+        "descuento_aplicado": 223.73,
+        "costo_final": 8365.27,
+        "ahorro_total": -865.27
+      },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-14-15",
+      "numero_contrato": "CTR-202604-000015",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-05",
+      "fecha_fin": "2027-05-05",
+      "estado": "PENDIENTE",
+      "limite_credito": 484529,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.84,
+          "ahorro_por_km": 0.84
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 4000,
+          "costo_total_negociado": 4420,
+          "ahorro_por_negociacion": -420,
+          "descuento_aplicado": 0,
+          "costo_final": 4420,
+          "ahorro_total": -420
+        },
+      "creado_en": "2026-04-16T21:41:54.008Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-15-16",
+      "numero_contrato": "CTR-202604-000016",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-04",
+      "fecha_fin": "2027-05-04",
+      "estado": "PENDIENTE",
+      "limite_credito": 165386,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.83,
+          "ahorro_por_km": 1.83
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.86,
+          "ahorro_por_km": 0.86
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.38,
+          "ahorro_por_km": 0.38
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 13.67,
+          "observacion": "Fidelización"
+        },
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 13.35,
+          "observacion": "Cliente preferencial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 19200,
+        "costo_total_negociado": 21557.76,
+        "ahorro_por_negociacion": -2357.76,
+        "descuento_aplicado": 2350.52,
+        "costo_final": 19207.24,
+        "ahorro_total": -7.24
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-16-17",
+      "numero_contrato": "CTR-202604-000017",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-26",
+      "fecha_fin": "2027-04-26",
+      "estado": "VIGENTE",
+      "limite_credito": 106112,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.3,
+          "ahorro_por_km": 3.3
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.83,
+          "ahorro_por_km": 1.83
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.02,
+          "ahorro_por_km": 0.02
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 18.96,
+          "observacion": "Contrato anual"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 15500,
+        "costo_total_negociado": 18693,
+        "ahorro_por_negociacion": -3193,
+        "descuento_aplicado": 590.11,
+        "costo_final": 18102.89,
+        "ahorro_total": -2602.89
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-17-18",
+      "numero_contrato": "CTR-202604-000018",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-28",
+      "fecha_fin": "2027-04-28",
+      "estado": "VIGENTE",
+      "limite_credito": 182934,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.69,
+          "ahorro_por_km": 1.69
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 320,
+          "costo_total_negociado": 387.6,
+          "ahorro_por_negociacion": -67.6,
+          "descuento_aplicado": 0,
+          "costo_final": 387.6,
+          "ahorro_total": -67.6
+        },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-18-19",
+      "numero_contrato": "CTR-202604-000019",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-26",
+      "fecha_fin": "2027-04-26",
+      "estado": "PENDIENTE",
+      "limite_credito": 306191,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.87,
+          "ahorro_por_km": 0.87
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.47,
+          "ahorro_por_km": 1.47
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.55,
+          "ahorro_por_km": 0.55
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 18.32,
+          "observacion": "Temporada baja"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1250,
+        "costo_total_negociado": 1394.5,
+        "ahorro_por_negociacion": -144.5,
+        "descuento_aplicado": 53.77,
+        "costo_final": 1340.73,
+        "ahorro_total": -90.73
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-19-20",
+      "numero_contrato": "CTR-202604-000020",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-08",
+      "fecha_fin": "2027-05-08",
+      "estado": "PENDIENTE",
+      "limite_credito": 464128,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.54,
+          "ahorro_por_km": 2.54
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.58,
+          "ahorro_por_km": 1.58
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 17.4,
+          "observacion": "Temporada baja"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1000,
+        "costo_total_negociado": 1206,
+        "ahorro_por_negociacion": -206,
+        "descuento_aplicado": 0,
+        "costo_final": 1206,
+        "ahorro_total": -206
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-20-21",
+      "numero_contrato": "CTR-202604-000021",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-18",
+      "fecha_fin": "2027-04-18",
+      "estado": "VIGENTE",
+      "limite_credito": 136538,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.21,
+          "ahorro_por_km": 0.21
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.56,
+          "ahorro_por_km": 1.56
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 5000,
+          "costo_total_negociado": 5442.5,
+          "ahorro_por_negociacion": -442.5,
+          "descuento_aplicado": 0,
+          "costo_final": 5442.5,
+          "ahorro_total": -442.5
+        },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-21-22",
+      "numero_contrato": "CTR-202604-000022",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-03",
+      "fecha_fin": "2027-05-03",
+      "estado": "VIGENTE",
+      "limite_credito": 174434,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.95,
+          "ahorro_por_km": 0.95
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        },
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 9.39,
+          "observacion": "Cliente preferencial"
+        },
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 17.07,
+          "observacion": "Promoción especial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 5440,
+        "costo_total_negociado": 6086,
+        "ahorro_por_negociacion": -646,
+        "descuento_aplicado": 0,
+        "costo_final": 6086,
+        "ahorro_total": -646
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-22-23",
+      "numero_contrato": "CTR-202604-000023",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-08",
+      "fecha_fin": "2027-05-08",
+      "estado": "ACTIVO",
+      "limite_credito": 412908,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 10.05,
+          "ahorro_por_km": 2.05
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.1,
+          "ahorro_por_km": 2.1
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 9.98,
+          "observacion": "Cliente preferencial"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 12.78,
+          "observacion": "Fidelización"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1100,
+        "costo_total_negociado": 1328.25,
+        "ahorro_por_negociacion": -228.25,
+        "descuento_aplicado": 148.04,
+        "costo_final": 1180.21,
+        "ahorro_total": -80.21
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-23-24",
+      "numero_contrato": "CTR-202604-000024",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-18",
+      "fecha_fin": "2027-04-18",
+      "estado": "ACTIVO",
+      "limite_credito": 255421,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.35,
+          "ahorro_por_km": 1.35
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.51,
+          "ahorro_por_km": 0.51
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.48,
+          "ahorro_por_km": 1.48
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 6.34,
+          "observacion": "Descuento por pronto pago"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 9125,
+        "costo_total_negociado": 10344.1,
+        "ahorro_por_negociacion": -1219.1,
+        "descuento_aplicado": 146.95,
+        "costo_final": 10197.15,
+        "ahorro_total": -1072.15
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-24-25",
+      "numero_contrato": "CTR-202604-000025",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-23",
+      "fecha_fin": "2027-04-23",
+      "estado": "ACTIVO",
+      "limite_credito": 447339,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.73,
+          "ahorro_por_km": 0.73
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.05,
+          "ahorro_por_km": 3.05
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.42,
+          "ahorro_por_km": 1.42
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 5.96,
+          "observacion": "Temporada baja"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 2750,
+        "costo_total_negociado": 3322,
+        "ahorro_por_negociacion": -572,
+        "descuento_aplicado": 42.09,
+        "costo_final": 3279.91,
+        "ahorro_total": -529.91
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-25-26",
+      "numero_contrato": "CTR-202604-000026",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-29",
+      "fecha_fin": "2027-04-29",
+      "estado": "ACTIVO",
+      "limite_credito": 376462,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.5,
+          "ahorro_por_km": 0.5
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 2120,
+          "costo_total_negociado": 2252.5,
+          "ahorro_por_negociacion": -132.5,
+          "descuento_aplicado": 0,
+          "costo_final": 2252.5,
+          "ahorro_total": -132.5
+        },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-26-27",
+      "numero_contrato": "CTR-202604-000027",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-15",
+      "fecha_fin": "2027-05-15",
+      "estado": "PENDIENTE",
+      "limite_credito": 307062,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.62,
+          "ahorro_por_km": 0.62
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.54,
+          "ahorro_por_km": 2.54
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 17.53,
+          "observacion": "Temporada baja"
+        },
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 6.11,
+          "observacion": "Fidelización"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 240,
+        "costo_total_negociado": 277.92,
+        "ahorro_por_negociacion": -37.92,
+        "descuento_aplicado": 30.59,
+        "costo_final": 247.33,
+        "ahorro_total": -7.33
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-27-28",
+      "numero_contrato": "CTR-202604-000028",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-12",
+      "fecha_fin": "2027-05-12",
+      "estado": "VIGENTE",
+      "limite_credito": 133499,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.2,
+          "ahorro_por_km": 1.2
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 17.95,
+          "observacion": "Cliente preferencial"
+        },
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 9.38,
+          "observacion": "Contrato anual"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 2810,
+        "costo_total_negociado": 3484.4,
+        "ahorro_por_negociacion": -674.4,
+        "descuento_aplicado": 326.84,
+        "costo_final": 3157.56,
+        "ahorro_total": -347.56
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-28-29",
+      "numero_contrato": "CTR-202604-000029",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-06",
+      "fecha_fin": "2027-05-06",
+      "estado": "ACTIVO",
+      "limite_credito": 221117,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.92,
+          "ahorro_por_km": 1.92
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.94,
+          "ahorro_por_km": 0.94
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.38,
+          "ahorro_por_km": 0.38
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 12.98,
+          "observacion": "Cliente preferencial"
+        },
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 16.6,
+          "observacion": "Fidelización"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 6250,
+        "costo_total_negociado": 7060,
+        "ahorro_por_negociacion": -810,
+        "descuento_aplicado": 752.26,
+        "costo_final": 6307.74,
+        "ahorro_total": -57.74
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-29-30",
+      "numero_contrato": "CTR-202604-000030",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-04",
+      "fecha_fin": "2027-05-04",
+      "estado": "VIGENTE",
+      "limite_credito": 299796,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 10.26,
+          "ahorro_por_km": 2.26
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.46,
+          "ahorro_por_km": 3.46
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 8.5,
+          "observacion": "Fidelización"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 4360,
+        "costo_total_negociado": 5606.96,
+        "ahorro_por_negociacion": -1246.96,
+        "descuento_aplicado": 190.12,
+        "costo_final": 5416.84,
+        "ahorro_total": -1056.84
+      },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-30-31",
+      "numero_contrato": "CTR-202604-000031",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-15",
+      "fecha_fin": "2027-05-15",
+      "estado": "ACTIVO",
+      "limite_credito": 464099,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 10.36,
+          "ahorro_por_km": 2.36
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.96,
+          "ahorro_por_km": 1.96
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 11160,
+          "costo_total_negociado": 13570.56,
+          "ahorro_por_negociacion": -2410.56,
+          "descuento_aplicado": 0,
+          "costo_final": 13570.56,
+          "ahorro_total": -2410.56
+        },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-31-32",
+      "numero_contrato": "CTR-202604-000032",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-22",
+      "fecha_fin": "2027-04-22",
+      "estado": "PENDIENTE",
+      "limite_credito": 454281,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.45,
+          "ahorro_por_km": 1.45
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 4680,
+          "costo_total_negociado": 5245.5,
+          "ahorro_por_negociacion": -565.5,
+          "descuento_aplicado": 0,
+          "costo_final": 5245.5,
+          "ahorro_total": -565.5
+        },
+      "creado_en": "2026-04-16T21:41:54.009Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-32-33",
+      "numero_contrato": "CTR-202604-000033",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-24",
+      "fecha_fin": "2027-04-24",
+      "estado": "ACTIVO",
+      "limite_credito": 419044,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.26,
+          "ahorro_por_km": 0.26
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 310,
+          "costo_total_negociado": 326.12,
+          "ahorro_por_negociacion": -16.12,
+          "descuento_aplicado": 0,
+          "costo_final": 326.12,
+          "ahorro_total": -16.12
+        },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-33-34",
+      "numero_contrato": "CTR-202604-000034",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-18",
+      "fecha_fin": "2027-04-18",
+      "estado": "ACTIVO",
+      "limite_credito": 357600,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.09,
+          "ahorro_por_km": 1.09
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.23,
+          "ahorro_por_km": 1.23
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.17,
+          "ahorro_por_km": 0.17
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 17.89,
+          "observacion": "Temporada baja"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1250,
+        "costo_total_negociado": 1374.5,
+        "ahorro_por_negociacion": -124.5,
+        "descuento_aplicado": 82.56,
+        "costo_final": 1291.94,
+        "ahorro_total": -41.94
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-34-35",
+      "numero_contrato": "CTR-202604-000035",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-10",
+      "fecha_fin": "2027-05-10",
+      "estado": "VIGENTE",
+      "limite_credito": 221908,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.49,
+          "ahorro_por_km": 1.49
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.37,
+          "ahorro_por_km": 3.37
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 10.59,
+          "observacion": "Cliente preferencial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 6800,
+        "costo_total_negociado": 8744,
+        "ahorro_por_negociacion": -1944,
+        "descuento_aplicado": 0,
+        "costo_final": 8744,
+        "ahorro_total": -1944
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-35-36",
+      "numero_contrato": "CTR-202604-000036",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-16",
+      "fecha_fin": "2027-04-16",
+      "estado": "ACTIVO",
+      "limite_credito": 460285,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.59,
+          "ahorro_por_km": 0.59
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.4,
+          "ahorro_por_km": 0.4
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 19.89,
+          "observacion": "Promoción especial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 935,
+        "costo_total_negociado": 989.45,
+        "ahorro_por_negociacion": -54.45,
+        "descuento_aplicado": 0,
+        "costo_final": 989.45,
+        "ahorro_total": -54.45
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-36-37",
+      "numero_contrato": "CTR-202604-000037",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-17",
+      "fecha_fin": "2027-04-17",
+      "estado": "PENDIENTE",
+      "limite_credito": 85320,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.99,
+          "ahorro_por_km": 1.99
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.9,
+          "ahorro_por_km": 0.9
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.12,
+          "ahorro_por_km": 0.12
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 10.62,
+          "observacion": "Temporada baja"
+        },
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 17.1,
+          "observacion": "Descuento por volumen"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1000,
+        "costo_total_negociado": 1120.4,
+        "ahorro_por_negociacion": -120.4,
+        "descuento_aplicado": 72.83,
+        "costo_final": 1047.57,
+        "ahorro_total": -47.57
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-37-38",
+      "numero_contrato": "CTR-202604-000038",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-22",
+      "fecha_fin": "2027-04-22",
+      "estado": "PENDIENTE",
+      "limite_credito": 389577,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.31,
+          "ahorro_por_km": 1.31
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.52,
+          "ahorro_por_km": 1.52
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.71,
+          "ahorro_por_km": 1.71
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 2950,
+          "costo_total_negociado": 3485.72,
+          "ahorro_por_negociacion": -535.72,
+          "descuento_aplicado": 0,
+          "costo_final": 3485.72,
+          "ahorro_total": -535.72
+        },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-38-39",
+      "numero_contrato": "CTR-202604-000039",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-07",
+      "fecha_fin": "2027-05-07",
+      "estado": "ACTIVO",
+      "limite_credito": 381146,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.03,
+          "ahorro_por_km": 2.03
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 13.26,
+          "observacion": "Descuento por pronto pago"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 6480,
+        "costo_total_negociado": 7576.2,
+        "ahorro_por_negociacion": -1096.2,
+        "descuento_aplicado": 1004.6,
+        "costo_final": 6571.6,
+        "ahorro_total": -91.6
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-39-40",
+      "numero_contrato": "CTR-202604-000040",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-24",
+      "fecha_fin": "2027-04-24",
+      "estado": "ACTIVO",
+      "limite_credito": 392699,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 10.11,
+          "ahorro_por_km": 2.11
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 2400,
+          "costo_total_negociado": 3033,
+          "ahorro_por_negociacion": -633,
+          "descuento_aplicado": 0,
+          "costo_final": 3033,
+          "ahorro_total": -633
+        },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-40-41",
+      "numero_contrato": "CTR-202604-000041",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-05",
+      "fecha_fin": "2027-05-05",
+      "estado": "VIGENTE",
+      "limite_credito": 489852,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.97,
+          "ahorro_por_km": 0.97
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 12.51,
+          "observacion": "Promoción especial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 3400,
+        "costo_total_negociado": 3812.25,
+        "ahorro_por_negociacion": -412.25,
+        "descuento_aplicado": 476.91,
+        "costo_final": 3335.34,
+        "ahorro_total": 64.66
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-41-42",
+      "numero_contrato": "CTR-202604-000042",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-24",
+      "fecha_fin": "2027-04-24",
+      "estado": "PENDIENTE",
+      "limite_credito": 59967,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 10.04,
+          "ahorro_por_km": 2.04
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.54,
+          "ahorro_por_km": 3.54
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 7000,
+          "costo_total_negociado": 8953,
+          "ahorro_por_negociacion": -1953,
+          "descuento_aplicado": 0,
+          "costo_final": 8953,
+          "ahorro_total": -1953
+        },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-42-43",
+      "numero_contrato": "CTR-202604-000043",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-27",
+      "fecha_fin": "2027-04-27",
+      "estado": "ACTIVO",
+      "limite_credito": 203053,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.66,
+          "ahorro_por_km": 0.66
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 14.41,
+          "observacion": "Fidelización"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1500,
+        "costo_total_negociado": 1698,
+        "ahorro_por_negociacion": -198,
+        "descuento_aplicado": 244.68,
+        "costo_final": 1453.32,
+        "ahorro_total": 46.68
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-43-44",
+      "numero_contrato": "CTR-202604-000044",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-04",
+      "fecha_fin": "2027-05-04",
+      "estado": "VIGENTE",
+      "limite_credito": 362957,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.04,
+          "ahorro_por_km": 1.04
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 2800,
+          "costo_total_negociado": 3164,
+          "ahorro_por_negociacion": -364,
+          "descuento_aplicado": 0,
+          "costo_final": 3164,
+          "ahorro_total": -364
+        },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-44-45",
+      "numero_contrato": "CTR-202604-000045",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-22",
+      "fecha_fin": "2027-04-22",
+      "estado": "VIGENTE",
+      "limite_credito": 333126,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.79,
+          "ahorro_por_km": 1.79
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.13,
+          "ahorro_por_km": 1.13
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 4784,
+          "costo_total_negociado": 5858.56,
+          "ahorro_por_negociacion": -1074.56,
+          "descuento_aplicado": 0,
+          "costo_final": 5858.56,
+          "ahorro_total": -1074.56
+        },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-45-46",
+      "numero_contrato": "CTR-202604-000046",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-06",
+      "fecha_fin": "2027-05-06",
+      "estado": "VIGENTE",
+      "limite_credito": 263870,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.52,
+          "ahorro_por_km": 3.52
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 11.35,
+          "observacion": "Cliente preferencial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 6744,
+        "costo_total_negociado": 8722.24,
+        "ahorro_por_negociacion": -1978.24,
+        "descuento_aplicado": 989.97,
+        "costo_final": 7732.27,
+        "ahorro_total": -988.27
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-46-47",
+      "numero_contrato": "CTR-202604-000047",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-03",
+      "fecha_fin": "2027-05-03",
+      "estado": "ACTIVO",
+      "limite_credito": 483265,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.38,
+          "ahorro_por_km": 1.38
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.04,
+          "ahorro_por_km": 0.04
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 8.57,
+          "observacion": "Fidelización"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 4000,
+        "costo_total_negociado": 4284,
+        "ahorro_por_negociacion": -284,
+        "descuento_aplicado": 229.33,
+        "costo_final": 4054.67,
+        "ahorro_total": -54.67
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-47-48",
+      "numero_contrato": "CTR-202604-000048",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-25",
+      "fecha_fin": "2027-04-25",
+      "estado": "PENDIENTE",
+      "limite_credito": 151155,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.52,
+          "ahorro_por_km": 0.52
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.14,
+          "ahorro_por_km": 1.14
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 754,
+          "costo_total_negociado": 850.28,
+          "ahorro_por_negociacion": -96.28,
+          "descuento_aplicado": 0,
+          "costo_final": 850.28,
+          "ahorro_total": -96.28
+        },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-48-49",
+      "numero_contrato": "CTR-202604-000049",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-01",
+      "fecha_fin": "2027-05-01",
+      "estado": "PENDIENTE",
+      "limite_credito": 59486,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.18,
+          "ahorro_por_km": 1.18
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.25,
+          "ahorro_por_km": 0.25
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.36,
+          "ahorro_por_km": 3.36
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 12.69,
+          "observacion": "Descuento por pronto pago"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 12.45,
+          "observacion": "Descuento por pronto pago"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 16550,
+        "costo_total_negociado": 19720.98,
+        "ahorro_por_negociacion": -3170.98,
+        "descuento_aplicado": 1199.12,
+        "costo_final": 18521.86,
+        "ahorro_total": -1971.86
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-1-49-50",
+      "numero_contrato": "CTR-202604-000050",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-19",
+      "fecha_fin": "2027-04-19",
+      "estado": "ACTIVO",
+      "limite_credito": 344031,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.11,
+          "ahorro_por_km": 2.11
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.65,
+          "ahorro_por_km": 0.65
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 3961,
+          "costo_total_negociado": 4604.08,
+          "ahorro_por_negociacion": -643.08,
+          "descuento_aplicado": 0,
+          "costo_final": 4604.08,
+          "ahorro_total": -643.08
+        },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-0-51",
+      "numero_contrato": "CTR-202604-000051",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-22",
+      "fecha_fin": "2027-04-22",
+      "estado": "PENDIENTE",
+      "limite_credito": 442014,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.64,
+          "ahorro_por_km": 2.64
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.75,
+          "ahorro_por_km": 0.75
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        },
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 12.83,
+          "observacion": "Contrato anual"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1224,
+        "costo_total_negociado": 1468.08,
+        "ahorro_por_negociacion": -244.08,
+        "descuento_aplicado": 0,
+        "costo_final": 1468.08,
+        "ahorro_total": -244.08
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-1-52",
+      "numero_contrato": "CTR-202604-000052",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-01",
+      "fecha_fin": "2027-05-01",
+      "estado": "PENDIENTE",
+      "limite_credito": 116342,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.61,
+          "ahorro_por_km": 0.61
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 8.48,
+          "observacion": "Contrato anual"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 4100,
+        "costo_total_negociado": 4600.2,
+        "ahorro_por_negociacion": -500.2,
+        "descuento_aplicado": 0,
+        "costo_final": 4600.2,
+        "ahorro_total": -500.2
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-2-53",
+      "numero_contrato": "CTR-202604-000053",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-09",
+      "fecha_fin": "2027-05-09",
+      "estado": "PENDIENTE",
+      "limite_credito": 214633,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.4,
+          "ahorro_por_km": 0.4
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.11,
+          "ahorro_por_km": 0.11
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 6.99,
+          "observacion": "Promoción especial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 8500,
+        "costo_total_negociado": 8755,
+        "ahorro_por_negociacion": -255,
+        "descuento_aplicado": 0,
+        "costo_final": 8755,
+        "ahorro_total": -255
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-3-54",
+      "numero_contrato": "CTR-202604-000054",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-12",
+      "fecha_fin": "2027-05-12",
+      "estado": "PENDIENTE",
+      "limite_credito": 149899,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.13,
+          "ahorro_por_km": 1.13
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.52,
+          "ahorro_por_km": 1.52
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 5.03,
+          "observacion": "Descuento por pronto pago"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 4420,
+        "costo_total_negociado": 5321,
+        "ahorro_por_negociacion": -901,
+        "descuento_aplicado": 162.81,
+        "costo_final": 5158.19,
+        "ahorro_total": -738.19
+      },
+      "creado_en": "2026-04-16T21:41:54.010Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-4-55",
+      "numero_contrato": "CTR-202604-000055",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-10",
+      "fecha_fin": "2027-05-10",
+      "estado": "ACTIVO",
+      "limite_credito": 404018,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 10.01,
+          "ahorro_por_km": 2.01
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.63,
+          "ahorro_por_km": 0.63
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.26,
+          "ahorro_por_km": 0.26
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 17.38,
+          "observacion": "Fidelización"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 14.92,
+          "observacion": "Descuento por pronto pago"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1500,
+        "costo_total_negociado": 1674,
+        "ahorro_por_negociacion": -174,
+        "descuento_aplicado": 144.46,
+        "costo_final": 1529.54,
+        "ahorro_total": -29.54
+      },
+      "creado_en": "2026-04-16T21:41:54.011Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-5-56",
+      "numero_contrato": "CTR-202604-000056",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-04",
+      "fecha_fin": "2027-05-04",
+      "estado": "VIGENTE",
+      "limite_credito": 439062,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.27,
+          "ahorro_por_km": 0.27
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 1500,
+          "costo_total_negociado": 1581,
+          "ahorro_por_negociacion": -81,
+          "descuento_aplicado": 0,
+          "costo_final": 1581,
+          "ahorro_total": -81
+        },
+      "creado_en": "2026-04-16T21:41:54.011Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-6-57",
+      "numero_contrato": "CTR-202604-000057",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-06",
+      "fecha_fin": "2027-05-06",
+      "estado": "ACTIVO",
+      "limite_credito": 322302,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.09,
+          "ahorro_por_km": 1.09
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.7,
+          "ahorro_por_km": 0.7
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.06,
+          "ahorro_por_km": 1.06
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 15.21,
+          "observacion": "Descuento por volumen"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 10200,
+        "costo_total_negociado": 11362.8,
+        "ahorro_por_negociacion": -1162.8,
+        "descuento_aplicado": 377.93,
+        "costo_final": 10984.87,
+        "ahorro_total": -784.87
+      },
+      "creado_en": "2026-04-16T21:41:54.011Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-7-58",
+      "numero_contrato": "CTR-202604-000058",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-13",
+      "fecha_fin": "2027-05-13",
+      "estado": "VIGENTE",
+      "limite_credito": 392271,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.2,
+          "ahorro_por_km": 3.2
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.51,
+          "ahorro_por_km": 0.51
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 12200,
+          "costo_total_negociado": 14463.1,
+          "ahorro_por_negociacion": -2263.1,
+          "descuento_aplicado": 0,
+          "costo_final": 14463.1,
+          "ahorro_total": -2263.1
+        },
+      "creado_en": "2026-04-16T21:41:54.011Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-8-59",
+      "numero_contrato": "CTR-202604-000059",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-09",
+      "fecha_fin": "2027-05-09",
+      "estado": "ACTIVO",
+      "limite_credito": 231966,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.23,
+          "ahorro_por_km": 1.23
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.9,
+          "ahorro_por_km": 2.9
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.53,
+          "ahorro_por_km": 0.53
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 9750,
+          "costo_total_negociado": 11567.4,
+          "ahorro_por_negociacion": -1817.4,
+          "descuento_aplicado": 0,
+          "costo_final": 11567.4,
+          "ahorro_total": -1817.4
+        },
+      "creado_en": "2026-04-16T21:41:54.011Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-9-60",
+      "numero_contrato": "CTR-202604-000060",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-30",
+      "fecha_fin": "2027-04-30",
+      "estado": "VIGENTE",
+      "limite_credito": 192058,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.14,
+          "ahorro_por_km": 1.14
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.59,
+          "ahorro_por_km": 0.59
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.96,
+          "ahorro_por_km": 2.96
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 8.51,
+          "observacion": "Contrato anual"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 10500,
+        "costo_total_negociado": 12469.8,
+        "ahorro_por_negociacion": -1969.8,
+        "descuento_aplicado": 219.46,
+        "costo_final": 12250.34,
+        "ahorro_total": -1750.34
+      },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-10-61",
+      "numero_contrato": "CTR-202604-000061",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-25",
+      "fecha_fin": "2027-04-25",
+      "estado": "PENDIENTE",
+      "limite_credito": 57355,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.58,
+          "ahorro_por_km": 0.58
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.65,
+          "ahorro_por_km": 0.65
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.34,
+          "ahorro_por_km": 1.34
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 13.29,
+          "observacion": "Cliente preferencial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 7500,
+        "costo_total_negociado": 8271,
+        "ahorro_por_negociacion": -771,
+        "descuento_aplicado": 531.87,
+        "costo_final": 7739.13,
+        "ahorro_total": -239.13
+      },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-11-62",
+      "numero_contrato": "CTR-202604-000062",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-07",
+      "fecha_fin": "2027-05-07",
+      "estado": "PENDIENTE",
+      "limite_credito": 251707,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.15,
+          "ahorro_por_km": 0.15
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.7,
+          "ahorro_por_km": 2.7
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.38,
+          "ahorro_por_km": 1.38
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        },
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 6175,
+          "costo_total_negociado": 7219.81,
+          "ahorro_por_negociacion": -1044.81,
+          "descuento_aplicado": 0,
+          "costo_final": 7219.81,
+          "ahorro_total": -1044.81
+        },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-12-63",
+      "numero_contrato": "CTR-202604-000063",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-22",
+      "fecha_fin": "2027-04-22",
+      "estado": "PENDIENTE",
+      "limite_credito": 89068,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.6,
+          "ahorro_por_km": 2.6
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.43,
+          "ahorro_por_km": 0.43
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 4300,
+          "costo_total_negociado": 4951.45,
+          "ahorro_por_negociacion": -651.45,
+          "descuento_aplicado": 0,
+          "costo_final": 4951.45,
+          "ahorro_total": -651.45
+        },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-13-64",
+      "numero_contrato": "CTR-202604-000064",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-14",
+      "fecha_fin": "2027-05-14",
+      "estado": "ACTIVO",
+      "limite_credito": 63666,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.7,
+          "ahorro_por_km": 1.7
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.97,
+          "ahorro_por_km": 0.97
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.28,
+          "ahorro_por_km": 1.28
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 8750,
+          "costo_total_negociado": 10132.5,
+          "ahorro_por_negociacion": -1382.5,
+          "descuento_aplicado": 0,
+          "costo_final": 10132.5,
+          "ahorro_total": -1382.5
+        },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-14-65",
+      "numero_contrato": "CTR-202604-000065",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-11",
+      "fecha_fin": "2027-05-11",
+      "estado": "PENDIENTE",
+      "limite_credito": 325767,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.27,
+          "ahorro_por_km": 0.27
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.6,
+          "ahorro_por_km": 0.6
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.53,
+          "ahorro_por_km": 3.53
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 12500,
+          "costo_total_negociado": 14700,
+          "ahorro_por_negociacion": -2200,
+          "descuento_aplicado": 0,
+          "costo_final": 14700,
+          "ahorro_total": -2200
+        },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-15-66",
+      "numero_contrato": "CTR-202604-000066",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-30",
+      "fecha_fin": "2027-04-30",
+      "estado": "PENDIENTE",
+      "limite_credito": 262454,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.26,
+          "ahorro_por_km": 1.26
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 5000,
+          "costo_total_negociado": 6260,
+          "ahorro_por_negociacion": -1260,
+          "descuento_aplicado": 0,
+          "costo_final": 6260,
+          "ahorro_total": -1260
+        },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-16-67",
+      "numero_contrato": "CTR-202604-000067",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-05",
+      "fecha_fin": "2027-05-05",
+      "estado": "ACTIVO",
+      "limite_credito": 416966,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.85,
+          "ahorro_por_km": 0.85
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12,
+          "ahorro_por_km": 0
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 14450,
+          "costo_total_negociado": 15172.5,
+          "ahorro_por_negociacion": -722.5,
+          "descuento_aplicado": 0,
+          "costo_final": 15172.5,
+          "ahorro_total": -722.5
+        },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-17-68",
+      "numero_contrato": "CTR-202604-000068",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-24",
+      "fecha_fin": "2027-04-24",
+      "estado": "PENDIENTE",
+      "limite_credito": 174939,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.01,
+          "ahorro_por_km": 1.01
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 9.73,
+          "observacion": "Contrato anual"
+        },
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 16.03,
+          "observacion": "Descuento por pronto pago"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 6000,
+        "costo_total_negociado": 6505,
+        "ahorro_por_negociacion": -505,
+        "descuento_aplicado": 632.94,
+        "costo_final": 5872.06,
+        "ahorro_total": 127.94
+      },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-18-69",
+      "numero_contrato": "CTR-202604-000069",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-12",
+      "fecha_fin": "2027-05-12",
+      "estado": "ACTIVO",
+      "limite_credito": 207801,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.91,
+          "ahorro_por_km": 2.91
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.55,
+          "ahorro_por_km": 0.55
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 18.95,
+          "observacion": "Descuento por volumen"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 19.09,
+          "observacion": "Fidelización"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 5015,
+        "costo_total_negociado": 6035.7,
+        "ahorro_por_negociacion": -1020.7,
+        "descuento_aplicado": 310.26,
+        "costo_final": 5725.44,
+        "ahorro_total": -710.44
+      },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-19-70",
+      "numero_contrato": "CTR-202604-000070",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-26",
+      "fecha_fin": "2027-04-26",
+      "estado": "ACTIVO",
+      "limite_credito": 81068,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.39,
+          "ahorro_por_km": 0.39
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.49,
+          "ahorro_por_km": 1.49
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 10.5,
+          "observacion": "Cliente preferencial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 2951,
+        "costo_total_negociado": 3377.76,
+        "ahorro_por_negociacion": -426.76,
+        "descuento_aplicado": 0,
+        "costo_final": 3377.76,
+        "ahorro_total": -426.76
+      },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-20-71",
+      "numero_contrato": "CTR-202604-000071",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-23",
+      "fecha_fin": "2027-04-23",
+      "estado": "VIGENTE",
+      "limite_credito": 497736,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.47,
+          "ahorro_por_km": 2.47
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.38,
+          "ahorro_por_km": 1.38
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 12.49,
+          "observacion": "Promoción especial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 10030,
+        "costo_total_negociado": 12301.5,
+        "ahorro_por_negociacion": -2271.5,
+        "descuento_aplicado": 470.15,
+        "costo_final": 11831.35,
+        "ahorro_total": -1801.35
+      },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-21-72",
+      "numero_contrato": "CTR-202604-000072",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-03",
+      "fecha_fin": "2027-05-03",
+      "estado": "ACTIVO",
+      "limite_credito": 150521,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.15,
+          "ahorro_por_km": 0.15
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 8.12,
+          "observacion": "Cliente preferencial"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 13.84,
+          "observacion": "Descuento por volumen"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1864,
+        "costo_total_negociado": 1898.95,
+        "ahorro_por_negociacion": -34.95,
+        "descuento_aplicado": 262.81,
+        "costo_final": 1636.14,
+        "ahorro_total": 227.86
+      },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-22-73",
+      "numero_contrato": "CTR-202604-000073",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-06",
+      "fecha_fin": "2027-05-06",
+      "estado": "ACTIVO",
+      "limite_credito": 484307,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.45,
+          "ahorro_por_km": 2.45
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 16.99,
+          "observacion": "Fidelización"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 17.84,
+          "observacion": "Promoción especial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 480,
+        "costo_total_negociado": 578,
+        "ahorro_por_negociacion": -98,
+        "descuento_aplicado": 98.2,
+        "costo_final": 479.8,
+        "ahorro_total": 0.2
+      },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-23-74",
+      "numero_contrato": "CTR-202604-000074",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-24",
+      "fecha_fin": "2027-04-24",
+      "estado": "PENDIENTE",
+      "limite_credito": 296571,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6,
+          "ahorro_por_km": 1
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.43,
+          "ahorro_por_km": 0.43
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.88,
+          "ahorro_por_km": 0.88
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 12.31,
+          "observacion": "Cliente preferencial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1750,
+        "costo_total_negociado": 1911.7,
+        "ahorro_por_negociacion": -161.7,
+        "descuento_aplicado": 51.7,
+        "costo_final": 1860,
+        "ahorro_total": -110
+      },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-24-75",
+      "numero_contrato": "CTR-202604-000075",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-01",
+      "fecha_fin": "2027-05-01",
+      "estado": "ACTIVO",
+      "limite_credito": 52437,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.32,
+          "ahorro_por_km": 0.32
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        },
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 15.68,
+          "observacion": "Descuento por pronto pago"
+        },
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 16.67,
+          "observacion": "Contrato anual"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 175,
+        "costo_total_negociado": 186.2,
+        "ahorro_por_negociacion": -11.2,
+        "descuento_aplicado": 31.04,
+        "costo_final": 155.16,
+        "ahorro_total": 19.84
+      },
+      "creado_en": "2026-04-16T21:41:54.012Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-25-76",
+      "numero_contrato": "CTR-202604-000076",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-21",
+      "fecha_fin": "2027-04-21",
+      "estado": "ACTIVO",
+      "limite_credito": 455322,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.19,
+          "ahorro_por_km": 0.19
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.29,
+          "ahorro_por_km": 3.29
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.59,
+          "ahorro_por_km": 0.59
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        },
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 17.39,
+          "observacion": "Contrato anual"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 15.39,
+          "observacion": "Promoción especial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 7625,
+        "costo_total_negociado": 8866.35,
+        "ahorro_por_negociacion": -1241.35,
+        "descuento_aplicado": 678.49,
+        "costo_final": 8187.86,
+        "ahorro_total": -562.86
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-26-77",
+      "numero_contrato": "CTR-202604-000077",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-03",
+      "fecha_fin": "2027-05-03",
+      "estado": "PENDIENTE",
+      "limite_credito": 422516,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.45,
+          "ahorro_por_km": 2.45
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 10.18,
+          "ahorro_por_km": 2.18
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.74,
+          "ahorro_por_km": 0.74
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 12.31,
+          "observacion": "Promoción especial"
+        },
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 9.2,
+          "observacion": "Descuento por volumen"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 1000,
+        "costo_total_negociado": 1214.8,
+        "ahorro_por_negociacion": -214.8,
+        "descuento_aplicado": 103.3,
+        "costo_final": 1111.5,
+        "ahorro_total": -111.5
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-27-78",
+      "numero_contrato": "CTR-202604-000078",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-17",
+      "fecha_fin": "2027-04-17",
+      "estado": "VIGENTE",
+      "limite_credito": 359050,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.3,
+          "ahorro_por_km": 0.3
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.94,
+          "ahorro_por_km": 1.94
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        },
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 2091,
+          "costo_total_negociado": 2366.52,
+          "ahorro_por_negociacion": -275.52,
+          "descuento_aplicado": 0,
+          "costo_final": 2366.52,
+          "ahorro_total": -275.52
+        },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-28-79",
+      "numero_contrato": "CTR-202604-000079",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-01",
+      "fecha_fin": "2027-05-01",
+      "estado": "VIGENTE",
+      "limite_credito": 319714,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.18,
+          "ahorro_por_km": 1.18
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.25,
+          "ahorro_por_km": 1.25
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.97,
+          "ahorro_por_km": 1.97
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 12250,
+          "costo_total_negociado": 14406,
+          "ahorro_por_negociacion": -2156,
+          "descuento_aplicado": 0,
+          "costo_final": 14406,
+          "ahorro_total": -2156
+        },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-29-80",
+      "numero_contrato": "CTR-202604-000080",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-06",
+      "fecha_fin": "2027-05-06",
+      "estado": "ACTIVO",
+      "limite_credito": 449904,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.07,
+          "ahorro_por_km": 1.07
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.04,
+          "ahorro_por_km": 1.04
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.06,
+          "ahorro_por_km": 0.06
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 8.12,
+          "observacion": "Promoción especial"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 13.5,
+          "observacion": "Descuento por pronto pago"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 10000,
+        "costo_total_negociado": 10868,
+        "ahorro_por_negociacion": -868,
+        "descuento_aplicado": 879.87,
+        "costo_final": 9988.13,
+        "ahorro_total": 11.87
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-30-81",
+      "numero_contrato": "CTR-202604-000081",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-12",
+      "fecha_fin": "2027-05-12",
+      "estado": "ACTIVO",
+      "limite_credito": 94320,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.54,
+          "ahorro_por_km": 3.54
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.25,
+          "ahorro_por_km": 0.25
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 3740,
+          "costo_total_negociado": 4573.8,
+          "ahorro_por_negociacion": -833.8,
+          "descuento_aplicado": 0,
+          "costo_final": 4573.8,
+          "ahorro_total": -833.8
+        },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-31-82",
+      "numero_contrato": "CTR-202604-000082",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-30",
+      "fecha_fin": "2027-04-30",
+      "estado": "VIGENTE",
+      "limite_credito": 313946,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.51,
+          "ahorro_por_km": 0.51
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 10.56,
+          "observacion": "Fidelización"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 12.73,
+          "observacion": "Cliente preferencial"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 6840,
+        "costo_total_negociado": 7130.7,
+        "ahorro_por_negociacion": -290.7,
+        "descuento_aplicado": 753,
+        "costo_final": 6377.7,
+        "ahorro_total": 462.3
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-32-83",
+      "numero_contrato": "CTR-202604-000083",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-22",
+      "fecha_fin": "2027-04-22",
+      "estado": "ACTIVO",
+      "limite_credito": 358472,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.38,
+          "ahorro_por_km": 0.38
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.28,
+          "ahorro_por_km": 1.28
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.04,
+          "ahorro_por_km": 2.04
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 14,
+          "observacion": "Contrato anual"
+        },
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 6.55,
+          "observacion": "Temporada baja"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 16250,
+        "costo_total_negociado": 18655,
+        "ahorro_por_negociacion": -2405,
+        "descuento_aplicado": 1169.23,
+        "costo_final": 17485.77,
+        "ahorro_total": -1235.77
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-33-84",
+      "numero_contrato": "CTR-202604-000084",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-15",
+      "fecha_fin": "2027-05-15",
+      "estado": "ACTIVO",
+      "limite_credito": 321318,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.56,
+          "ahorro_por_km": 0.56
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 10.37,
+          "ahorro_por_km": 2.37
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 13360,
+          "costo_total_negociado": 15317.24,
+          "ahorro_por_negociacion": -1957.24,
+          "descuento_aplicado": 0,
+          "costo_final": 15317.24,
+          "ahorro_total": -1957.24
+        },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-34-85",
+      "numero_contrato": "CTR-202604-000085",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-21",
+      "fecha_fin": "2027-04-21",
+      "estado": "ACTIVO",
+      "limite_credito": 430105,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.39,
+          "ahorro_por_km": 0.39
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.93,
+          "ahorro_por_km": 1.93
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 12.22,
+          "observacion": "Temporada baja"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 5800,
+        "costo_total_negociado": 6472.8,
+        "ahorro_por_negociacion": -672.8,
+        "descuento_aplicado": 439.08,
+        "costo_final": 6033.72,
+        "ahorro_total": -233.72
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-35-86",
+      "numero_contrato": "CTR-202604-000086",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-15",
+      "fecha_fin": "2027-05-15",
+      "estado": "PENDIENTE",
+      "limite_credito": 223334,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.01,
+          "ahorro_por_km": 1.01
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.28,
+          "ahorro_por_km": 0.28
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 7240,
+          "costo_total_negociado": 7706.98,
+          "ahorro_por_negociacion": -466.98,
+          "descuento_aplicado": 0,
+          "costo_final": 7706.98,
+          "ahorro_total": -466.98
+        },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-36-87",
+      "numero_contrato": "CTR-202604-000087",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-13",
+      "fecha_fin": "2027-05-13",
+      "estado": "VIGENTE",
+      "limite_credito": 109697,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.32,
+          "ahorro_por_km": 1.32
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.22,
+          "ahorro_por_km": 3.22
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 8.1,
+          "observacion": "Descuento por volumen"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 17000,
+        "costo_total_negociado": 21540,
+        "ahorro_por_negociacion": -4540,
+        "descuento_aplicado": 1232.82,
+        "costo_final": 20307.18,
+        "ahorro_total": -3307.18
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-37-88",
+      "numero_contrato": "CTR-202604-000088",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-11",
+      "fecha_fin": "2027-05-11",
+      "estado": "ACTIVO",
+      "limite_credito": 267356,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 10.28,
+          "ahorro_por_km": 2.28
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.17,
+          "ahorro_por_km": 1.17
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 10.94,
+          "observacion": "Descuento por pronto pago"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 11.09,
+          "observacion": "Temporada baja"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 8640,
+        "costo_total_negociado": 10130.4,
+        "ahorro_por_negociacion": -1490.4,
+        "descuento_aplicado": 492.5,
+        "costo_final": 9637.9,
+        "ahorro_total": -997.9
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-38-89",
+      "numero_contrato": "CTR-202604-000089",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-13",
+      "fecha_fin": "2027-05-13",
+      "estado": "ACTIVO",
+      "limite_credito": 91736,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.07,
+          "ahorro_por_km": 0.07
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "San Miguel Petapa",
+          "destino": "Guatemala",
+          "distancia_km": 18,
+          "tipo_carga": "General",
+          "costo_estimado": 144
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 16.43,
+          "observacion": "Contrato anual"
+        },
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 18.66,
+          "observacion": "Temporada baja"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 2090,
+        "costo_total_negociado": 2119.26,
+        "ahorro_por_negociacion": -29.26,
+        "descuento_aplicado": 395.45,
+        "costo_final": 1723.81,
+        "ahorro_total": 366.19
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-39-90",
+      "numero_contrato": "CTR-202604-000090",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-24",
+      "fecha_fin": "2027-04-24",
+      "estado": "PENDIENTE",
+      "limite_credito": 318076,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.34,
+          "ahorro_por_km": 1.34
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.83,
+          "ahorro_por_km": 1.83
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 14.97,
+          "observacion": "Descuento por volumen"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 5265,
+        "costo_total_negociado": 6548.85,
+        "ahorro_por_negociacion": -1283.85,
+        "descuento_aplicado": 595.98,
+        "costo_final": 5952.87,
+        "ahorro_total": -687.87
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-40-91",
+      "numero_contrato": "CTR-202604-000091",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-01",
+      "fecha_fin": "2027-05-01",
+      "estado": "ACTIVO",
+      "limite_credito": 87379,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 10.21,
+          "ahorro_por_km": 2.21
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 15.22,
+          "ahorro_por_km": 3.22
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 9.21,
+          "observacion": "Descuento por volumen"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 800,
+        "costo_total_negociado": 1017.2,
+        "ahorro_por_negociacion": -217.2,
+        "descuento_aplicado": 0,
+        "costo_final": 1017.2,
+        "ahorro_total": -217.2
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-41-92",
+      "numero_contrato": "CTR-202604-000092",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-14",
+      "fecha_fin": "2027-05-14",
+      "estado": "PENDIENTE",
+      "limite_credito": 396310,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.33,
+          "ahorro_por_km": 0.33
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.22,
+          "ahorro_por_km": 0.22
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.53,
+          "ahorro_por_km": 2.53
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Villa Nueva",
+          "destino": "Guatemala",
+          "distancia_km": 20,
+          "tipo_carga": "General",
+          "costo_estimado": 160
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 8.85,
+          "observacion": "Cliente preferencial"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 13.39,
+          "observacion": "Contrato anual"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 500,
+        "costo_total_negociado": 561.6,
+        "ahorro_por_negociacion": -61.6,
+        "descuento_aplicado": 31.55,
+        "costo_final": 530.05,
+        "ahorro_total": -30.05
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-42-93",
+      "numero_contrato": "CTR-202604-000093",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-11",
+      "fecha_fin": "2027-05-11",
+      "estado": "VIGENTE",
+      "limite_credito": 160909,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.99,
+          "ahorro_por_km": 1.99
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Quetzaltenango",
+          "distancia_km": 200,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Escuintla",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "CABEZAL",
+          "porcentaje_descuento": 6.13,
+          "observacion": "Fidelización"
+        },
+        {
+          "tipo_unidad": "PESADA",
+          "porcentaje_descuento": 19.53,
+          "observacion": "Descuento por pronto pago"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 7200,
+        "costo_total_negociado": 8991,
+        "ahorro_por_negociacion": -1791,
+        "descuento_aplicado": 1755.94,
+        "costo_final": 7235.06,
+        "ahorro_total": -35.06
+      },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-43-94",
+      "numero_contrato": "CTR-202604-000094",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-28",
+      "fecha_fin": "2027-04-28",
+      "estado": "ACTIVO",
+      "limite_credito": 440787,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.56,
+          "ahorro_por_km": 2.56
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.04,
+          "ahorro_por_km": 1.04
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Mixco",
+          "destino": "Guatemala",
+          "distancia_km": 15,
+          "tipo_carga": "General",
+          "costo_estimado": 120
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 19300,
+          "costo_total_negociado": 22774,
+          "ahorro_por_negociacion": -3474,
+          "descuento_aplicado": 0,
+          "costo_final": 22774,
+          "ahorro_total": -3474
+        },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-44-95",
+      "numero_contrato": "CTR-202604-000095",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-12",
+      "fecha_fin": "2027-05-12",
+      "estado": "PENDIENTE",
+      "limite_credito": 228916,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.16,
+          "ahorro_por_km": 0.16
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Quetzaltenango",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Santa Catarina Pinula",
+          "destino": "Guatemala",
+          "distancia_km": 12,
+          "tipo_carga": "General",
+          "costo_estimado": 96
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 1810,
+          "costo_total_negociado": 1867.92,
+          "ahorro_por_negociacion": -57.92,
+          "descuento_aplicado": 0,
+          "costo_final": 1867.92,
+          "ahorro_total": -57.92
+        },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-45-96",
+      "numero_contrato": "CTR-202604-000096",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-07",
+      "fecha_fin": "2027-05-07",
+      "estado": "VIGENTE",
+      "limite_credito": 369622,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.29,
+          "ahorro_por_km": 0.29
+        },
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 9.21,
+          "ahorro_por_km": 1.21
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Puerto Barrios",
+          "distancia_km": 350,
+          "tipo_carga": "General",
+          "costo_estimado": 2800
+        },
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 5720,
+          "costo_total_negociado": 6380,
+          "ahorro_por_negociacion": -660,
+          "descuento_aplicado": 0,
+          "costo_final": 6380,
+          "ahorro_total": -660
+        },
+      "creado_en": "2026-04-16T21:41:54.013Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-46-97",
+      "numero_contrato": "CTR-202604-000097",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-13",
+      "fecha_fin": "2027-05-13",
+      "estado": "PENDIENTE",
+      "limite_credito": 309766,
+      "plazo_pago": 30,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 12.33,
+          "ahorro_por_km": 0.33
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.31,
+          "ahorro_por_km": 1.31
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        },
+        {
+          "origen": "Puerto Barrios",
+          "destino": "Guatemala",
+          "distancia_km": 300,
+          "tipo_carga": "Refrigerado",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Guatemala",
+          "destino": "Antigua",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 9180,
+          "costo_total_negociado": 10065.6,
+          "ahorro_por_negociacion": -885.6,
+          "descuento_aplicado": 0,
+          "costo_final": 10065.6,
+          "ahorro_total": -885.6
+        },
+      "creado_en": "2026-04-16T21:41:54.014Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-47-98",
+      "numero_contrato": "CTR-202604-000098",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-05-01",
+      "fecha_fin": "2027-05-01",
+      "estado": "ACTIVO",
+      "limite_credito": 426866,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.46,
+          "ahorro_por_km": 2.46
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 5.37,
+          "ahorro_por_km": 0.37
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 13.53,
+          "observacion": "Contrato anual"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 3400,
+        "costo_total_negociado": 3966,
+        "ahorro_por_negociacion": -566,
+        "descuento_aplicado": 145.31,
+        "costo_final": 3820.69,
+        "ahorro_total": -420.69
+      },
+      "creado_en": "2026-04-16T21:41:54.014Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-48-99",
+      "numero_contrato": "CTR-202604-000099",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-23",
+      "fecha_fin": "2027-04-23",
+      "estado": "PENDIENTE",
+      "limite_credito": 196356,
+      "plazo_pago": 15,
+      "tarifas": [
+        {
+          "tarifario_id": 2,
+          "tipo_unidad": "PESADA",
+          "costo_base_km": 8,
+          "costo_km_negociado": 8.92,
+          "ahorro_por_km": 0.92
+        },
+        {
+          "tarifario_id": 1,
+          "tipo_unidad": "LIGERA",
+          "costo_base_km": 5,
+          "costo_km_negociado": 6.1,
+          "ahorro_por_km": 1.1
+        },
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 14.84,
+          "ahorro_por_km": 2.84
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Antigua",
+          "destino": "Guatemala",
+          "distancia_km": 40,
+          "tipo_carga": "Frágil",
+          "costo_estimado": 320
+        },
+        {
+          "origen": "Escuintla",
+          "destino": "Guatemala",
+          "distancia_km": 50,
+          "tipo_carga": "General",
+          "costo_estimado": 400
+        }
+      ],
+      "descuentos": [],
+      "resumen_financiero": {
+          "costo_total_base": 2250,
+          "costo_total_negociado": 2687.4,
+          "ahorro_por_negociacion": -437.4,
+          "descuento_aplicado": 0,
+          "costo_final": 2687.4,
+          "ahorro_total": -437.4
+        },
+      "creado_en": "2026-04-16T21:41:54.014Z",
+      "simulado": true,
+      "enviado_a_db": false
+    },
+    {
+      "id": "SIM-2-49-100",
+      "numero_contrato": "CTR-202604-000100",
+      "cliente_id": 36,
+      "cliente_nombre": "Jens Prueba",
+      "cliente_nit": "1234567890123",
+      "fecha_inicio": "2026-04-25",
+      "fecha_fin": "2027-04-25",
+      "estado": "ACTIVO",
+      "limite_credito": 194927,
+      "plazo_pago": 45,
+      "tarifas": [
+        {
+          "tarifario_id": 3,
+          "tipo_unidad": "CABEZAL",
+          "costo_base_km": 12,
+          "costo_km_negociado": 13.67,
+          "ahorro_por_km": 1.67
+        }
+      ],
+      "rutas": [
+        {
+          "origen": "Guatemala",
+          "destino": "Puerto Barrios",
+          "distancia_km": 300,
+          "tipo_carga": "Contenedor",
+          "costo_estimado": 2400
+        },
+        {
+          "origen": "Quetzaltenango",
+          "destino": "Guatemala",
+          "distancia_km": 200,
+          "tipo_carga": "General",
+          "costo_estimado": 1600
+        }
+      ],
+      "descuentos": [
+        {
+          "tipo_unidad": "LIGERA",
+          "porcentaje_descuento": 13.4,
+          "observacion": "Descuento por volumen"
+        }
+      ],
+      "resumen_financiero": {
+        "costo_total_base": 6000,
+        "costo_total_negociado": 6835,
+        "ahorro_por_negociacion": -835,
+        "descuento_aplicado": 0,
+        "costo_final": 6835,
+        "ahorro_total": -835
+      },
+      "creado_en": "2026-04-16T21:41:54.014Z",
+      "simulado": true,
+      "enviado_a_db": false
+    }
+  ]
+}

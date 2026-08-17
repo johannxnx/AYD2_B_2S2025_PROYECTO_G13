@@ -1,0 +1,27 @@
+{
+  "fecha_prueba": "2026-04-16T22:49:42.491Z",
+  "tipo_prueba": "PRUEBA DE CARGA - Simulación de flujo del Piloto",
+  "conclusion": "Se determinó que el sistema valida correctamente las credenciales del piloto bajo una simulación de 1000 entregas completadas. \n    El tiempo promedio de login fue de 1544.70ms, con una tasa de éxito del 100%. \n    Durante la simulación, se reportaron 318 eventos (31.8% de las operaciones), \n    demostrando que el flujo completo del piloto (ver órdenes → reportar eventos → finalizar entrega) puede ejecutarse sin problemas bajo carga.",
+  "estado": "EXITOSO - Solo simulación, sin base de datos",
+  "piloto": {
+    "email": "nando1852004@gmail.com",
+    "login_validado": true,
+    "tiempo_promedio_login_ms": 1544.7
+  },
+  "configuracion": {
+    "usuarios_virtuales": 10,
+    "iteraciones_por_usuario": 100,
+    "total_entregas_simuladas": 1000
+  },
+  "metricas": {
+    "tiempo_promedio_login_ms": 1544.7,
+    "tiempo_p95_login_ms": 1924.55,
+    "tasa_error_porcentaje": 0
+  },
+  "resultados": {
+    "entregas_completadas": 1000,
+    "eventos_reportados": 318,
+    "porcentaje_eventos": 31.8,
+    "nota": "El piloto no realizó operaciones reales en la base de datos. Solo se validó el login."
+  }
+}

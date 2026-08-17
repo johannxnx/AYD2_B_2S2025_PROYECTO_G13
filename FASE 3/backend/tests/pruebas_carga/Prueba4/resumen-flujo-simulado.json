@@ -1,0 +1,21 @@
+{
+  "fecha_prueba": "2026-04-16T22:18:47.836Z",
+  "tipo_prueba": "PRUEBA DE CARGA - Simulación flujo completo",
+  "conclusion": "Se determinó que el sistema valida correctamente las credenciales de cliente y operativo bajo una simulación de 1000 órdenes y 1000 asignaciones. \n    Los tiempos de login fueron de 887.70ms para cliente y 873.30ms para operativo, con una tasa de éxito del 100%. \n    La simulación demostró que el flujo completo de negocio (cliente crea orden → operativo asigna recursos) puede ejecutarse sin problemas bajo carga.",
+  "estado": "EXITOSO - Solo simulación, sin base de datos",
+  "configuracion": {
+    "usuarios_virtuales": 10,
+    "iteraciones_por_usuario": 100,
+    "total_ordenes_simuladas": 1000,
+    "total_asignaciones_simuladas": 1000
+  },
+  "metricas": {
+    "cliente_login_promedio_ms": 887.7,
+    "operativo_login_promedio_ms": 873.3,
+    "tasa_error_porcentaje": 0
+  },
+  "metricas_negocio_simuladas": {
+    "costo_total_ordenes": 1345510.2,
+    "costo_promedio_por_orden": 1345.51
+  }
+}

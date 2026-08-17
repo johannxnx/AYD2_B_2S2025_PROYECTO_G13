@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "fecha_prueba": "2026-04-16T20:54:05.752Z",
+    "tipo_prueba": "Prueba de carga - Asignación de órdenes (Operativo)",
+    "usuario": {
+      "email": "operativo@logitrans.com",
+      "rol": "operativo"
+    },
+    "configuracion": {
+      "usuarios_virtuales": 3,
+      "iteraciones_por_usuario": 10,
+      "max_duration": "3m"
+    }
+  },
+  "resultados": {
+    "asignaciones_exitosas": 2,
+    "asignaciones_fallidas": 28,
+    "total_intentos": 30,
+    "tasa_exito_porcentaje": 6.67
+  },
+  "metricas_rendimiento": {
+    "tiempos_respuesta_promedio_ms": {
+      "login": 972.33,
+      "obtener_ordenes": 218.7,
+      "obtener_vehiculos": 179,
+      "obtener_pilotos": 727.67,
+      "asignar_orden": 533
+    },
+    "tiempos_respuesta_percentiles": {
+      "login_p95": 1018,
+      "asignar_orden_p95": 702.7
+    },
+    "total_peticiones_http": 42,
+    "tasa_error_porcentaje": 100
+  },
+  "metricas_negocio": {
+    "promedio_ordenes_pendientes": 0,
+    "promedio_vehiculos_disponibles": 0,
+    "promedio_pilotos_disponibles": 0
+  }
+}

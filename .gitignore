@@ -1,0 +1,58 @@
+node_modules/
+dist/
+build/
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.code-workspace
+
+# Sistema operativo
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencias y lock files (opcional - algunos prefieren subirlos)
+yarn.lock
+pnpm-lock.yaml
+
+# TypeScript
+*.tsbuildinfo
+.tsconfig.tsbuildinfo
+
+# Compilación y outputs
+.next/
+out/
+coverage/
+.nyc_output/
+
+# Caché
+.eslintcache
+.webpack/
+.turbo/
+
+# Tests
+.coverage/
+
+# Base de datos local (si usas SQLite u otra local)
+*.db
+*.sqlite
+*.sqlite3
+
+# Caché de vite
+.vite/
